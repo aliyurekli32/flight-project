@@ -38,10 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
+    'users',
     'rest_framework',
     'drf_yasg',
     # "debug_toolbar",
+    'rest_framework.authtoken',
+    'dj_rest_auth',
 
 ]
 
@@ -132,6 +135,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # INTERNAL_IPS = [
 #  "127.0.0.1",
 # ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 LOGGING = {
  "version": 1,
