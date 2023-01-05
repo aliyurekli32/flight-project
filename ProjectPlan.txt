@@ -1,0 +1,17 @@
+flight table
+reservation
+passenger
+
+#flight
+    -client
+        .views upcoming flights
+    -staff
+        .views all flight with reservations
+        .crud flights
+
+#reservation
+    -client
+        -crud reservation only their reservations
+
+    -staff
+        .crud reservations all
